@@ -1,0 +1,14 @@
+fun isPalindrome(str: String): Boolean {
+    if (str.length <= 1) {
+        return true
+    }
+    if (str.first() != str.last()) {
+        return false
+    }
+    return isPalindrome(str.substring(1, str.length - 1))
+}
+
+fun main(){
+    val word = "abba"
+	println(isPalindrome(word))
+}
